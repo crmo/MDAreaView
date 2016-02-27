@@ -1,15 +1,19 @@
 //
 //  ViewController.m
-//  test2
+//  MDAreaView
 //
 //  Created by CR.MO on 15/10/11.
-//  Copyright (c) 2015年 CR.MO. All rights reserved.
+//  Copyright (c) 2016年 CR.MO. All rights reserved.
 //
 
 #import "ViewController.h"
 
 #import "MDAreaSelectView.h"
 #import "MDAreaView.h"
+
+@interface ViewController()<MDAreaViewDelegate>
+
+@end
 
 @implementation ViewController
 {
@@ -18,8 +22,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    areaSelectView = [MDAreaView MDAreaViewWithFram:CGRectMake(20, 60, 300, 400) backgroundImage:[UIImage imageNamed:@"testPic"] row:16 column:16];
-//    areaSelectView.delegate = self;
+    // Init MDAreaView with frame,background image,number of rows and columns.
+    areaSelectView = [MDAreaView MDAreaViewWithFram:CGRectMake(20, 60, 300, 400) backgroundImage:[UIImage imageNamed:@"testPic"] row:20 column:20];
+    areaSelectView.delegate = self;
     [self.view addSubview:areaSelectView];
 }
 
@@ -29,6 +34,13 @@
 
 - (IBAction)cancelSelectAllArea:(id)sender {
     [areaSelectView cancelSelectAllArea];
+}
+
+#pragma mark - MDAreaView Delegate
+
+-(void)MDAreaViewDelegate:(MDAreaView *)mdAreaView areaArray:(NSArray *)array {
+    // Do something.
+    NSLog(@"Select View:%@", array);
 }
 
 @end

@@ -1,20 +1,21 @@
 //
 //  MDAreaView.m
-//  test2
+//  MDAreaView
 //
 //  Created by CR.MO on 15/11/21.
-//  Copyright © 2015年 CR.MO. All rights reserved.
+//  Copyright © 2016年 CR.MO. All rights reserved.
 //
 
 #import "MDAreaView.h"
 #import "MDAreaSelectView.h"
 #import "MDAreaViewCell.h"
 
-#define INTERITEM_SPACING   1
+#define INTERITEM_SPACING   2
 #define LINE_SPACING        1
 #define AREA_SELECTED       YES
 #define AREA_NO_SELECTED    NO
 
+#define DEBUG_SWITCH        0
 
 static NSString *MDAreaViewCellId = @"MDAreaViewCell";
 
@@ -98,10 +99,14 @@ static NSString *MDAreaViewCellId = @"MDAreaViewCell";
     CGFloat endX = (startPoint.x > endPoint.x ? startPoint.x : endPoint.x);
     CGFloat startY = (startPoint.y < endPoint.y ? startPoint.y : endPoint.y);
     CGFloat endY = (startPoint.y > endPoint.y ? startPoint.y : endPoint.y);
+#if DEBUG_SWITCH
     NSLog(@"startX=%f,startY=%f,endX=%f,endY=%f", startX, startY, endX, endY);
+#endif
     
     if (itemWidth == 0 || itemHeight == 0) {
+#if DEBUG_SWITCH
         NSLog(@"MDAreaSelectViewDelegate err:itemWidth or itemHeight is zero");
+#endif
     }
     
     int startColumn = (((int)startX % (int)itemWidth) < (itemWidth / 3 * 2) ? startX / itemWidth : (startX / itemWidth + 1));
@@ -119,7 +124,9 @@ static NSString *MDAreaViewCellId = @"MDAreaViewCell";
         startColumn = endColumn;
     }
     
+#if DEBUG_SWITCH
     NSLog(@"startColumn=%d,endColumn=%d,startRow=%d,endRow=%d",startColumn, endColumn, startRow, endRow);
+#endif
     
     NSInteger noSelectedNum = 0;
     for (int row = startRow; row <= endRow; row++) {
@@ -142,14 +149,22 @@ static NSString *MDAreaViewCellId = @"MDAreaViewCell";
     }
     
     [_collectionView reloadData];
+    if (_delegate && [_delegate respondsToSelector:@selector(MDAreaViewDelegate:areaArray:)]) {
+        [_delegate MDAreaViewDelegate:self areaArray:_areas];
+    }
 }
 
 - (void)MDAreaSelectViewDelegate:(MDAreaSelectView *)mdAreaSelectView tapPoint:(CGPoint)point {
+#if DEBUG_SWITCH
     NSLog(@"Tappoint:%@", NSStringFromCGPoint(point));
+#endif
     NSInteger row = point.y / (itemHeight);
     NSInteger column = point.x / (itemWidth);
     _areas[row * _column + column] = @(![(NSNumber *)_areas[row * _column + column] boolValue]);
     [_collectionView reloadData];
+    if (_delegate && [_delegate respondsToSelector:@selector(MDAreaViewDelegate:areaArray:)]) {
+        [_delegate MDAreaViewDelegate:self areaArray:_areas];
+    }
 }
 
 #pragma mark -CollectionView delegate
@@ -179,6 +194,9 @@ static NSString *MDAreaViewCellId = @"MDAreaViewCell";
         _areas[count] = @AREA_SELECTED;
     }
     [_collectionView reloadData];
+    if (_delegate && [_delegate respondsToSelector:@selector(MDAreaViewDelegate:areaArray:)]) {
+        [_delegate MDAreaViewDelegate:self areaArray:_areas];
+    }
 }
 
 - (void)cancelSelectAllArea {
@@ -186,6 +204,9 @@ static NSString *MDAreaViewCellId = @"MDAreaViewCell";
         _areas[count] = @AREA_NO_SELECTED;
     }
     [_collectionView reloadData];
+    if (_delegate && [_delegate respondsToSelector:@selector(MDAreaViewDelegate:areaArray:)]) {
+        [_delegate MDAreaViewDelegate:self areaArray:_areas];
+    }
 }
 
 @end

@@ -1,9 +1,9 @@
 //
 //  MDAreaView.h
-//  test2
+//  MDAreaView
 //
 //  Created by CR.MO on 15/11/21.
-//  Copyright © 2015年 CR.MO. All rights reserved.
+//  Copyright © 2016年 CR.MO. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
@@ -12,21 +12,29 @@
 
 @protocol MDAreaViewDelegate <NSObject>
 
+/**
+ *  When you change the select view,this function will be called.
+ *
+ *  @param mdAreaView The MDAreaView you changed.
+ *  @param array      This is a Double Dimensional Array(the index are row number and column number) 
+                      that storage the area`s state,selected(1) or not selected(0).
+ */
 - (void)MDAreaViewDelegate:(MDAreaView *)mdAreaView areaArray:(NSArray *)array;
 
 @end
 
 @interface MDAreaView : UIView
 
+@property (nonatomic, weak) id<MDAreaViewDelegate> delegate;
+
 /**
- *  Init 
+ *  Init MDAreaView
  *
- *  @param frame  <#frame description#>
- *  @param image  <#image description#>
- *  @param row    <#row description#>
- *  @param column <#column description#>
+ *  @param frame  The select area view`s fram.
+ *  @param image  The background image.
+ *  @param row    The number of rows.
+ *  @param column The number of coumns.
  *
- *  @return <#return value description#>
  */
 + (instancetype)MDAreaViewWithFram:(CGRect)frame backgroundImage:(UIImage *)image row:(NSInteger)row column:(NSInteger)column;
 

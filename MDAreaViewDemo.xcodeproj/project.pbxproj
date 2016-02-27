@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		170ED07A1C8192C0005D2185 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 170ED0781C8192C0005D2185 /* LaunchScreen.xib */; };
+		170ED07B1C8192C0005D2185 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 170ED0791C8192C0005D2185 /* Main.storyboard */; };
 		17C12ABD1C816E5400C7F01E /* MDAreaSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C12AB81C816E5400C7F01E /* MDAreaSelectView.m */; };
 		17C12ABE1C816E5400C7F01E /* MDAreaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C12ABA1C816E5400C7F01E /* MDAreaView.m */; };
 		17C12ABF1C816E5400C7F01E /* MDAreaViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C12ABC1C816E5400C7F01E /* MDAreaViewCell.m */; };
 		17C12AC81C816ECB00C7F01E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C12AC11C816ECB00C7F01E /* AppDelegate.m */; };
-		17C12AC91C816ECB00C7F01E /* Base.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 17C12AC21C816ECB00C7F01E /* Base.lproj */; };
 		17C12ACA1C816ECB00C7F01E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17C12AC31C816ECB00C7F01E /* Images.xcassets */; };
 		17C12ACB1C816ECB00C7F01E /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 17C12AC41C816ECB00C7F01E /* Info.plist */; };
 		17C12ACC1C816ECB00C7F01E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C12AC51C816ECB00C7F01E /* main.m */; };
@@ -31,6 +32,8 @@
 /* Begin PBXFileReference section */
 		170823341BCA5A1D00F90D6C /* MDAreaViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MDAreaViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1708234D1BCA5A1E00F90D6C /* MDAreaViewDemo.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MDAreaViewDemo.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		170ED0781C8192C0005D2185 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
+		170ED0791C8192C0005D2185 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		17C12AB71C816E5400C7F01E /* MDAreaSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MDAreaSelectView.h; path = MDAreaView/MDAreaSelectView.h; sourceTree = "<group>"; };
 		17C12AB81C816E5400C7F01E /* MDAreaSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MDAreaSelectView.m; path = MDAreaView/MDAreaSelectView.m; sourceTree = "<group>"; };
 		17C12AB91C816E5400C7F01E /* MDAreaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MDAreaView.h; path = MDAreaView/MDAreaView.h; sourceTree = "<group>"; };
@@ -39,7 +42,6 @@
 		17C12ABC1C816E5400C7F01E /* MDAreaViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MDAreaViewCell.m; path = MDAreaView/MDAreaViewCell.m; sourceTree = "<group>"; };
 		17C12AC01C816ECB00C7F01E /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		17C12AC11C816ECB00C7F01E /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		17C12AC21C816ECB00C7F01E /* Base.lproj */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Base.lproj; sourceTree = "<group>"; };
 		17C12AC31C816ECB00C7F01E /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		17C12AC41C816ECB00C7F01E /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17C12AC51C816ECB00C7F01E /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -68,10 +70,11 @@
 		1708232B1BCA5A1D00F90D6C = {
 			isa = PBXGroup;
 			children = (
+				170ED0781C8192C0005D2185 /* LaunchScreen.xib */,
+				170ED0791C8192C0005D2185 /* Main.storyboard */,
 				17C12AB61C816E4600C7F01E /* MDAreaView */,
 				17C12AC01C816ECB00C7F01E /* AppDelegate.h */,
 				17C12AC11C816ECB00C7F01E /* AppDelegate.m */,
-				17C12AC21C816ECB00C7F01E /* Base.lproj */,
 				17C12AC31C816ECB00C7F01E /* Images.xcassets */,
 				17C12AC41C816ECB00C7F01E /* Info.plist */,
 				17C12AC51C816ECB00C7F01E /* main.m */,
@@ -152,6 +155,7 @@
 				TargetAttributes = {
 					170823331BCA5A1D00F90D6C = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = RYNK6ZCP32;
 					};
 					1708234C1BCA5A1E00F90D6C = {
 						CreatedOnToolsVersion = 6.4;
@@ -183,9 +187,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17C12AC91C816ECB00C7F01E /* Base.lproj in Resources */,
 				17C12ACA1C816ECB00C7F01E /* Images.xcassets in Resources */,
+				170ED07A1C8192C0005D2185 /* LaunchScreen.xib in Resources */,
 				17C12ACB1C816ECB00C7F01E /* Info.plist in Resources */,
+				170ED07B1C8192C0005D2185 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +321,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CRMO.MDAreaViewDemo;
@@ -327,6 +333,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "$(SRCROOT)/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CRMO.MDAreaViewDemo;
