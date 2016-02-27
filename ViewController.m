@@ -23,7 +23,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Init MDAreaView with frame,background image,number of rows and columns.
-    areaSelectView = [MDAreaView MDAreaViewWithFram:CGRectMake(20, 60, 300, 400) backgroundImage:[UIImage imageNamed:@"testPic"] row:20 column:20];
+    areaSelectView = [MDAreaView MDAreaViewWithFram:CGRectMake(20, 60, 300, 400)
+                                    backgroundImage:[UIImage imageNamed:@"testPic"]
+                                                row:8 column:8];
     areaSelectView.delegate = self;
     [self.view addSubview:areaSelectView];
 }
@@ -38,7 +40,7 @@
 
 #pragma mark - MDAreaView Delegate
 
--(void)MDAreaViewDelegate:(MDAreaView *)mdAreaView areaArray:(NSArray *)array {
+- (void)MDAreaViewDelegate:(MDAreaView *)mdAreaView areaArray:(NSArray *)array {
     // Do something.
     NSLog(@"Select View:%@", array);
 }
