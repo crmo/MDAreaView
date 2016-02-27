@@ -1,8 +1,6 @@
 # Installation
-------
 Copy the folder 'MDAreaView' to your project,then you can use it.
 #Usage
------
 You can find a demo in ViewController.
 ###Create a MDAreaView
 ```objectivec
