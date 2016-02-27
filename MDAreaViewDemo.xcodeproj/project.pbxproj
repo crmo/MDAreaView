@@ -10,6 +10,7 @@
 		170ED07A1C8192C0005D2185 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 170ED0781C8192C0005D2185 /* LaunchScreen.xib */; };
 		170ED07B1C8192C0005D2185 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 170ED0791C8192C0005D2185 /* Main.storyboard */; };
 		170ED07F1C819B88005D2185 /* Demo.gif in Resources */ = {isa = PBXBuildFile; fileRef = 170ED07E1C819B88005D2185 /* Demo.gif */; };
+		170ED0811C819D17005D2185 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 170ED0801C819D17005D2185 /* README.md */; };
 		17C12ABD1C816E5400C7F01E /* MDAreaSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C12AB81C816E5400C7F01E /* MDAreaSelectView.m */; };
 		17C12ABE1C816E5400C7F01E /* MDAreaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C12ABA1C816E5400C7F01E /* MDAreaView.m */; };
 		17C12ABF1C816E5400C7F01E /* MDAreaViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C12ABC1C816E5400C7F01E /* MDAreaViewCell.m */; };
@@ -36,6 +37,7 @@
 		170ED0781C8192C0005D2185 /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
 		170ED0791C8192C0005D2185 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		170ED07E1C819B88005D2185 /* Demo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Demo.gif; sourceTree = "<group>"; };
+		170ED0801C819D17005D2185 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		17C12AB71C816E5400C7F01E /* MDAreaSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MDAreaSelectView.h; path = MDAreaView/MDAreaSelectView.h; sourceTree = "<group>"; };
 		17C12AB81C816E5400C7F01E /* MDAreaSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MDAreaSelectView.m; path = MDAreaView/MDAreaSelectView.m; sourceTree = "<group>"; };
 		17C12AB91C816E5400C7F01E /* MDAreaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MDAreaView.h; path = MDAreaView/MDAreaView.h; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 		1708232B1BCA5A1D00F90D6C = {
 			isa = PBXGroup;
 			children = (
+				170ED0801C819D17005D2185 /* README.md */,
 				170ED07E1C819B88005D2185 /* Demo.gif */,
 				170ED0781C8192C0005D2185 /* LaunchScreen.xib */,
 				170ED0791C8192C0005D2185 /* Main.storyboard */,
@@ -215,6 +218,7 @@
 				17C12ACD1C816ECB00C7F01E /* ViewController.m in Sources */,
 				17C12ACC1C816ECB00C7F01E /* main.m in Sources */,
 				17C12AC81C816ECB00C7F01E /* AppDelegate.m in Sources */,
+				170ED0811C819D17005D2185 /* README.md in Sources */,
 				17C12ABE1C816E5400C7F01E /* MDAreaView.m in Sources */,
 				17C12ABD1C816E5400C7F01E /* MDAreaSelectView.m in Sources */,
 				17C12ABF1C816E5400C7F01E /* MDAreaViewCell.m in Sources */,
